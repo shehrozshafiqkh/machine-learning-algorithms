@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <title>Titanic Survival Predictor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: linear-gradient(-45deg, #bdbdbd, black);
+            font-family: "Lucida Console", Courier, monospace;
+        }
+        
+        div {
+            background-color: #EEEEEE;
+            margin: auto;
+            margin-top: 2%;
+            border-style: solid;
+            border-width: medium;
+            width: 30%;
+            padding: 2%;
+            box-shadow: 11px 17px 15px 5px rgba(0, 0, 0, 0.75);
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+        }
+        
+        h1 {
+            color: white;
+            text-align: center;
+            padding-top: 3%;
+            font-weight: 800;
+        }
+        
+        label {
+            padding: 14px 16px;
+            display: inline-block;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        
+        select {
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Titanic Survival Rate</h1>
+
+    <div>
+        <form action="/prediction" method="POST">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required style="padding: 6px;"> 
+                <option value="">None</option>
+                <option value="0">Female</option> 
+				<option value="1">Male</option> 
+			</select>
+            <br>
+            <label for="p_class">Passenger Class:</label>
+            <select id="p_class" name="p_class" required> 
+                <option value="">None</option>
+                <option value="1">1st</option> 
+				<option value="2">2nd</option> 
+				<option value="3">3rd</option> 
+			</select>
+            <br>
+            <label for="sib_sp">Siblings:</label>
+            <input type="text" id="sib_sp" name="sib_sp" placeholder="0-9" size="12" maxlength="1" required>
+            <br>
+            <label for="embarked">Embarked:</label>
+            <select name="embarked" id="embarked" required>
+                <option value="">None</option>
+				<option value="0">Southampton</option>
+				<option value="1">Cherbourg</option>
+				<option value="2">Queenstown</option>
+			</select>
+            <br>
+            <input type="submit" value="Submit" class="btn btn-success" style="margin-top: 5px; margin-left: 5%;">
+        </form>
+    </div>
+</body>
+
+</html>
