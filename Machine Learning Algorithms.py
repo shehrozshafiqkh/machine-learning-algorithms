@@ -40,7 +40,7 @@ from sklearn.metrics import f1_score
 
 
 # reading titanic-dataset.csv file data
-df = pd.read_csv('Dataset\titanic-dataset.csv')
+df = pd.read_csv('Dataset/titanic-dataset.csv')
 df.head()
 
 
